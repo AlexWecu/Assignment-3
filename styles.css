@@ -1,0 +1,486 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+    font-size: 8px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+}
+
+h1, h2, h3, p {
+    font-family: 'Inter', sans-serif;
+    color: black;
+    margin: 0;
+}
+main {
+    margin-left: clamp(4rem, 8vw, 15rem);
+    margin-right: clamp(4rem, 8vw, 15rem);
+}
+
+@media (max-width: 800px) {
+
+    html, body {
+        height: 100%; 
+        margin: 0; 
+        font-size: 8px;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    h1, h2, h3, p {
+        font-family: 'Inter', sans-serif;
+        color: black;
+        margin: 0;
+    }
+    main {
+        margin: 0 2rem;
+    }
+}
+
+/*------------------------------------------------header */
+
+header {
+    position: fixed;
+    top: 0;
+    height: 85px;
+    width: 100%;
+    z-index: 3;
+}
+
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px; 
+    text-underline-offset: 6px;
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 3px 4rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a{
+    font-family:"Inter", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.6s ease;
+}
+
+
+.logo a {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.6s ease, text-decoration 0.6s ease; 
+}
+
+@media (max-width: 800px) {
+    header {
+        position: fixed;
+        top: 0;
+        height: 85px;
+        width: 100%;
+        z-index: 3;
+    }
+
+    nav {
+        margin: 3px 1rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    
+}
+
+/*------------------------------------------------hero */
+
+.hero {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    height: 100vh;
+    background: url("/assets/Hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1; 
+  }
+  
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    padding-top: 58vh;
+    padding-left: 10vw;
+    position: relative;
+    z-index: 2; 
+  }
+  
+  .hero h1 {
+    color: transparent;
+    font-size: clamp(6rem, 8vw, 20rem);
+    margin-bottom: -16px;
+    line-height: 1.1;
+    -webkit-text-stroke: 4px white;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease; 
+  }
+  
+  .popup-video {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    width: 800px; 
+    height: auto;
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1; 
+  }
+
+.hero h3 {
+    color: white;
+    font-size: clamp(2rem, 2.5vw, 7rem);
+    margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+
+    .heroContent {
+        padding-top: 58vh;
+        padding-left: 10vw;
+    }
+
+    .hero h1 {
+        -webkit-text-stroke: 1.5px white;
+    }
+
+    .popup-video {
+        width: 100vw;
+    }
+    
+}
+
+/*------------------------------------------------Intro */
+
+.intro {
+    margin: 44rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.introLeft,
+.introRight {
+    width: 50%;
+}
+
+
+.introRight img {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.bioText h1 {
+    font-size: clamp(3rem, 5vw + 1rem, 8rem);
+    font-weight: 700;
+}
+
+.bioText p {
+    font-size: clamp(1.8rem, 1.5vw + 1rem, 5rem);
+    font-weight: 250;
+    color: rgba(153, 153, 153, 1);
+}
+
+.bioStat {
+    margin-top: 18.5rem;
+    font-size: 3rem;
+}
+
+.bioStat span {
+    color: rgba(153, 153, 153, 1);
+    font-size: 3rem;
+    font-weight: 250;
+}
+/*------------------------------------------------Intro Mobile*/
+@media (max-width: 800px) {
+    
+    .intro {
+        flex-direction: column;  
+        margin: 20rem 0;
+        gap: 8rem;
+        text-align: center;
+        align-items: center;
+      }
+    
+    .introLeft,
+    .introRight {
+        width: 100%;
+    }
+
+    .introLeft {
+        text-align: left;
+    }
+    
+    
+    .introRight img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .bioText h1 {
+        font-size: clamp(3rem, 5vw + 1rem, 8rem);
+        font-weight: 700;
+    }
+    
+    .bioText p {
+        font-size: clamp(1.8rem, 3vw + 1rem, 5rem);
+        font-weight: 250;
+        color: rgba(153, 153, 153, 1);
+    }
+    
+    .bioStat {
+        margin-top: 6rem;
+        font-size: clamp(1.4rem, 2.2vw + 0.8rem, 4rem);
+    }
+    
+    .bioStat span {
+        color: rgba(153, 153, 153, 1);
+        font-size: clamp(1.4rem, 2.2vw + 0.8rem, 4rem);
+        font-weight: 250;
+    }
+
+}
+
+/*------------------------------------------------Quote */
+
+.quote {
+    margin: 0rem clamp(1rem, 8vw, 26rem);
+    opacity: 0;
+    transform: translateY(100px); /* More dramatic slide up */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  }
+  
+  .quote.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .quote h1 {
+    font-size: clamp(2rem, 3vw + 1rem, 8rem);
+    text-align: center;
+  }
+  
+
+/*------------------------------------------------Works */
+
+.workGallery {
+    margin: clamp(2rem, 25vw + 2rem, 44rem) 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.gRowLeft,
+.gRowMid,
+.gRowRight {
+    width: 33%;
+}
+
+.gRow1 img{
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease; 
+}
+
+.gRow1:hover img {
+    transform: scale(0.4);
+}
+
+.gRow1 h3{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.gRow1 p{
+    font-size: 3rem;
+    font-weight: 300;
+    padding-bottom: 9rem;
+    color: #3A3A3A;
+}
+
+.midRowPadding {
+    padding-top: 6rem;
+}
+
+.rightRowPadding {
+    padding-top: 3rem;
+}
+
+/*------------------------------------------------Works Mobile*/
+@media (max-width: 800px){
+
+    .workGallery {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .gRowLeft,
+    .gRowMid,
+    .gRowRight {
+        width: 100%;
+    }
+    
+    .gRow1 img{
+        width: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease; 
+    }
+    
+    .gRow1:hover img {
+        transform: scale(0.6);
+    }
+    
+    .gRow1 h3{
+        font-size: 3rem;
+        font-weight: 700;
+        margin-top: 1rem;
+    }
+    
+    .gRow1 p{
+        font-size: 3rem;
+        font-weight: 300;
+        padding-bottom: 4rem;
+        color: #3A3A3A;
+    }
+
+    .midRowPadding {
+        padding-top: 0;
+    }
+    
+    .rightRowPadding {
+        padding-top: 0;
+    }
+}
+
+
+/*------------------------------------------------Philosophy*/
+.philosophy {
+    margin: clamp(2rem, 25vw + 2rem, 44rem) 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.philosophyContainer {
+    width: 100%;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 0 2rem;
+}
+
+.philosophyContainer:hover {
+    background-color: #222222;
+}
+
+.philosophyContainer:hover h1 {
+    color: white;
+    -webkit-text-stroke: 0px transparent;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
+}
+
+.philosophyContainer:hover p {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.philosophyContainer h1{
+    font-size: 12rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 3px black;
+    margin-top: 11rem;
+}
+
+.philosophyContainer p{
+    align-items: center;
+    margin-top: 6rem;
+    font-size: 4rem;
+    font-weight: 250;
+    max-width: 800px;
+    margin: 6rem auto;
+    margin-bottom: 13rem;
+    color: #3A3A3A;
+}
+
+@media (max-width: 800px) {
+
+    .philosophyContainer h1{
+        font-size: clamp(3.5rem, 8vw, 12rem);
+        -webkit-text-stroke: 1px black;
+    }
+
+    .philosophyContainer p{
+        font-size: clamp(2rem, 5vw, 4rem);
+        max-width: 400px;
+    }
+}
+
+
+/*------------------------------------------------Footer*/
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+  }
+
+  .footerContent {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footerLogo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8rem;
+    margin-bottom: 2rem;
+  }
+
+  .footerCredits p {
+    font-size: 2rem;
+    color: #888;
+  }
+
+    
